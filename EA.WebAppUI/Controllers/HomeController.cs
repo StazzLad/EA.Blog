@@ -6,7 +6,25 @@ namespace EA.WebAppUI.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(Index);
+
         }
+
+        public IActionResult About()
+        {
+            return View(About);
+        }
+
+        public IActionResult Contact()
+        {
+            return View(Contact);
+        }
+        public IActionResult BlogPost()
+        {
+            return View(BlogPost);
+        }
+
     }
+
+    
 }

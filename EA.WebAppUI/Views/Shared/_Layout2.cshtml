@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <partial name="_Head" />
+</head>
+<body>
+    <partial name="_Header" />
+    <partial name="_Sidebar" />
+    @RenderBody()
+    <partial name ="_Footer" />
+    <partial name="_Scripts" />
+    @await RenderSectionAsync("Scripts", required: false)  
+</body>
+</html>

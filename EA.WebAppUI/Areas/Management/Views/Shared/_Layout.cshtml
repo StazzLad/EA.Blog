@@ -1,0 +1,28 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <partial name="_Head" />
+</head>
+<body>
+    <div class="wrapper">
+        <partial name="_Sidebar" />
+        <partial name="_Header" />
+        <div class="page-wrapper">
+            
+          @RenderBody()
+             
+        </div>
+
+        <div class="overlay toggle-btn-mobile"></div>
+
+        <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+        <partial name="_Footer" />
+    </div>
+    <partial name="_Switcher" />
+    <partial name="_Scripts" />
+    @await RenderSectionAsync("Scripts", false);
+</body>
+</html>
