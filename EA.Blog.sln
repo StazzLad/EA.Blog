@@ -7,9 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EA.WebAppUI", "EA.WebAppUI\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{F2FE4658-6F77-499A-B879-6E22190135F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLL", "DLL\DLL.csproj", "{9BFA0681-BD23-4E10-B4FE-EC1E7BD4C552}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DLL\DAL.csproj", "{9BFA0681-BD23-4E10-B4FE-EC1E7BD4C552}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entities\Entity.csproj", "{DE0DD48D-7A5F-41A5-ABDF-A64FE6E19F4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{A75B36B1-2A31-4B9B-A74C-BAE5DD93D23A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{DE0DD48D-7A5F-41A5-ABDF-A64FE6E19F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE0DD48D-7A5F-41A5-ABDF-A64FE6E19F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE0DD48D-7A5F-41A5-ABDF-A64FE6E19F4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A75B36B1-2A31-4B9B-A74C-BAE5DD93D23A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A75B36B1-2A31-4B9B-A74C-BAE5DD93D23A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A75B36B1-2A31-4B9B-A74C-BAE5DD93D23A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A75B36B1-2A31-4B9B-A74C-BAE5DD93D23A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

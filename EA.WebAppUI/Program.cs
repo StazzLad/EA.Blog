@@ -1,3 +1,9 @@
+
+using BLL.Abstract;
+using DAL;
+using DAL.Concrete;
+using Microsoft.EntityFrameworkCore;
+
 namespace EA.WebAppUI
 {
     public class Program
@@ -5,6 +11,10 @@ namespace EA.WebAppUI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<DbBlogContext>(options =>
+   options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddScoped<IHeaderBLL, HeaderBLL>();
+           
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

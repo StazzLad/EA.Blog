@@ -25,5 +25,6 @@ namespace Entity.Entities
         public List<string> Tags { get; set; } = new List<string>();
         [ValidateNever]
         public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();   
+        public virtual User? User { get; set; } // Navigation property to User
     }
 }

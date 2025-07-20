@@ -3812,15 +3812,16 @@ textarea.form-control-lg {
 	color: #fff
 }
 .card {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	min-width: 0;
-	word-wrap: break-word;
-	background-color: #fff;
-	background-clip: border-box;
-	border: 1px solid rgba(0, 0, 0, .125);
-	border-radius: .25rem
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    table-layout: auto;
 }
 .card>hr {
 	margin-right: 0;
@@ -5805,13 +5806,16 @@ textarea.form-control-lg {
 	display: inline-block!important
 }
 .d-block {
-	display: block!important
+	display: block !important ;
+	
 }
 .d-grid {
 	display: grid!important
 }
 .d-table {
-	display: table!important
+	display: table !important;
+	width: 100%;
+	table-layout: auto;
 }
 .d-table-row {
 	display: table-row!important
