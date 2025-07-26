@@ -1,0 +1,63 @@
+﻿@using BLL
+@using Entity.Entities
+@model BlogPost
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Management/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-9 offset-md-2">
+        <div class="card border-top border-0 border-4 border-primary">
+            <div class="card-body p-5">
+                <div class="card-title d-flex align-items-center">
+                    @* <div>
+                        <i class="bx bxs-user me-1 font-22 text-primary"></i>
+                    </div> *@
+                    <h5 class="mb-0 text-primary">Add new Banner</h5>
+                </div>
+                <hr>
+                <form enctype="multipart/form-data" class="row g-3" method="post" asp-area="Management" asp-controller="BlogPost" asp-action="Create">
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    @Html.Hidden("Status", 1)
+
+                    <div class="col-md-12">
+                        <label asp-for="ImageUrl" class="form-label"></label>
+                        <input type="file" id="image" name="image" class="form-control" />
+                        <span class="text-danger" asp-validation-for="ImageUrl"></span>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label asp-for="Title" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="Title" required>
+                        <span class="text-danger" asp-validation-for="Title"></span>
+                    </div>
+                    <div class="col-md-12">
+                        <label asp-for="ShortContent" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="Title" required>
+                        <span class="text-danger" asp-validation-for="Title"></span>
+                    </div>
+                    <div class="col-md-12">
+                        <label asp-for="Content" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="Title" required>
+                        <span class="text-danger" asp-validation-for="Title"></span>
+                    </div>
+                    <div class="col-md-12">
+                        <label asp-for="Author" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="Title" required>
+                        <span class="text-danger" asp-validation-for="Title"></span>
+                    </div>
+                    
+
+                    <div class="col-12">
+                        <a asp-area="Management" asp-controller="BlogPost" asp-action="Index" class="btn btn-secondary px-5">Back</a>
+                        <button type="submit" class="btn btn-primary px-5 float-end">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

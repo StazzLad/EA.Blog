@@ -15,16 +15,19 @@ namespace Entity.Entities
         public BlogPost()
         {
             this.Comments = new HashSet<Comment>();
+          
         }
         public string Title { get; set; }
         public string Content { get; set; }
+        public string ShortContent { get; set; }
         public string Author { get; set; }
-        public int Likes { get; set; } 
+        public int Likes { get; set; } = 0; // Default value for Likes
         [ValidateNever]
         public string ImageUrl { get; set; }
         public List<string> Tags { get; set; } = new List<string>();
         [ValidateNever]
         public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();   
         public virtual User? User { get; set; } // Navigation property to User
+        public int CommentCount => Comments.Count; // Computed property for comment count
     }
 }

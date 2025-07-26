@@ -1,0 +1,39 @@
+﻿@using Entity.Entities
+@using BLL
+@model List<BlogPost>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Management/Views/Shared/_Layout.cshtml";
+}
+@foreach (var item in Model)
+{
+	<div class="toolbar hidden-print mb-2">
+		<div class="text-end">
+			<a class="btn btn-primary" asp-area="Management" asp-controller="BlogPost" asp-action="Create">Create A new Post</a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 mb-5">
+						<div class="blog-item">
+							<img src="@item.ImageUrl" alt="" class="img-fluid rounded">
+
+							<div class="blog-item-content bg-white p-4">
+
+								<h3 class="mt-3 mb-3"><a href="blog-single.html">@item.Title</a></h3>
+								<p class="mb-4">@item.ShortContent</p>
+
+								<a asp-controller="BlogPost" asp-action="Update" class="btn btn-small btn-main btn-round-full">Edit</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+}
+
